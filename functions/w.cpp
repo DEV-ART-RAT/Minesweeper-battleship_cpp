@@ -14,7 +14,24 @@ bool MatrixThreePos(T matrix, int posR,int posC,char pos){
     MaxCol=Mcols-1;
     MaxRow=Mrow-1;
     //left ; right ; Down ; Up
-    return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
+    switch (pos)
+    {
+    case 'a':
+        return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
+        break;
+    case 'l':
+        return((Left<0)?false:true);
+    case 'r':
+        return((Right>MaxCol)?false:true);
+    case 'd':
+        return((Down>MaxRow)?false:true);
+    case 'u':
+        return((Up<0)?false:true);
+
+    default:
+        return false;
+        break;
+    }
 };
 
 bool MatrixThreePos(int** matrix, int posR,int posC,char pos){
@@ -24,7 +41,24 @@ bool MatrixThreePos(int** matrix, int posR,int posC,char pos){
     MaxCol=Mcols-1;
     MaxRow=Mrow-1;
     //left ; right ; Down ; Up
-    return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
+    switch (pos)
+    {
+    case 'a':
+        return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
+        break;
+    case 'l':
+        return((Left<0)?false:true);
+    case 'r':
+        return((Right>MaxCol)?false:true);
+    case 'd':
+        return((Down>MaxRow)?false:true);
+    case 'u':
+        return((Up<0)?false:true);
+
+    default:
+        return false;
+        break;
+    }
 };
 
 
@@ -32,11 +66,10 @@ bool MatrixThreePos(int** matrix, int posR,int posC,char pos){
 
 /*
 
-     char matrix[16][16]={{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'}};
-    
+    char matrix[16][16]={{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'}};
     for(int i = 0; i < 16; i++){
         for(int j = 0; j < 16; j++)
-            cout<<((MatrixThreePos(matrix,i,j)==false)? "No":"Yes")<<"\t";
+            cout<<((MatrixThreePos(matrix,i,j,'a')==false)? "No":"Yes")<<"\t";
         cout<<"\n";
     }
 
