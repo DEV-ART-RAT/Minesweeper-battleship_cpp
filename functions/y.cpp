@@ -3,12 +3,12 @@
 
 
 template <typename T>
-bool MatrixFivePos(T matrix, int posR,int posC);
+bool MatrixFivePos(T matrix, int posR,int posC,char pos);
 
-bool MatrixFivePos(int** matrix, int posR,int posC);
+bool MatrixFivePos(int** matrix, int posR,int posC,char pos);
 
 template <typename T>
-bool MatrixFivePos(T matrix, int posR,int posC){
+bool MatrixFivePos(T matrix, int posR,int posC,char pos){
     int moves=5;
     int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
@@ -19,7 +19,7 @@ bool MatrixFivePos(T matrix, int posR,int posC){
        
 };
 
-bool MatrixFivePos(int** matrix, int posR,int posC){
+bool MatrixFivePos(int** matrix, int posR,int posC,char pos){
     int moves=5;
     int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);

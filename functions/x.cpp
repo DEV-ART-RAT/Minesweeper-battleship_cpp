@@ -2,12 +2,12 @@
 //en la dirección indicada, chequee si es posible avanzar 4 celdas en dicha dirección.
 
 template <typename T>
-bool MatrixFourPos(T matrix, int posR,int posC);
+bool MatrixFourPos(T matrix, int posR,int posC,char pos);
 
-bool MatrixFourPos(int** matrix, int posR,int posC);
+bool MatrixFourPos(int** matrix, int posR,int posC,char pos);
 
 template <typename T>
-bool MatrixFourPos(T matrix, int posR,int posC){
+bool MatrixFourPos(T matrix, int posR,int posC,char pos){
     int moves=4;
     int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
@@ -18,7 +18,7 @@ bool MatrixFourPos(T matrix, int posR,int posC){
 };
 
 
-bool MatrixFourPos(int** matrix, int posR,int posC){
+bool MatrixFourPos(int** matrix, int posR,int posC,char pos){
     int moves=4;
     int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
