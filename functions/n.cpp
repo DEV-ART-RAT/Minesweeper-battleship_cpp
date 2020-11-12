@@ -18,3 +18,11 @@ void printArrayBar(char *arr,int size){
     for (int i = 0; i < size; i++)
        cout<<arr[i]<<"|";
 };
+
+/*
+
+    char* array =NewArray<char>(3);
+    ArraySpace(array,3);
+    printArrayBar(array,3);
+
+    */

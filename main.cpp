@@ -2,8 +2,8 @@
 
 int main(void)
 {   
-    int* array =NewArray<int>(3);
-    ArrayZero(array,3);
+    char* array =NewArray<char>(3);
+    ArraySpace(array,3);
     printArrayBar(array,3);
     return 0;
 }
