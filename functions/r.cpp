@@ -8,7 +8,7 @@ template <typename T>
 bool MatrixRight(T matrix, int posR,int posC){
     int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    if(posR>=Mcols)
+    if(posC>=Mcols)
         return false;
     else
         return true;
@@ -17,7 +17,7 @@ bool MatrixRight(T matrix, int posR,int posC){
 bool MatrixRight(int** matrix, int posR,int posC){
     int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    if(posR>=Mcols)
+    if(posC>=Mcols)
         return false;
     else
         return true;
@@ -25,9 +25,8 @@ bool MatrixRight(int** matrix, int posR,int posC){
 
 //main
 /*
-    char matrix[3][3]={{'a','b','c'},{'d','e','c'}};
-    MatrixSpace(matrix,3);
-    cout<<"\n"<<((MatrixRight(matrix,2,0)==false)? "No Right":"Right")<<"\n";
+    char matrix[6][3]={{'a','b','c'},{'d','e','c'},{'a','b','c'},{'a','b','c'},{'d','e','c'},{'a','b','c'}    };
+    cout<<"\n"<<((MatrixRight(matrix,4,3)==false)? "No":"Yes")<<"\n";
 */
 
 
