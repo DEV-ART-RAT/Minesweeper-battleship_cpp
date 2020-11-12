@@ -2,7 +2,9 @@
 
 int main(void)
 {   
-    cout<<intRandom();
+    TwoValuesRandom Random=TwoRandom(0,1000);
+    cout<<Random.firstR<<endl;
+    cout<<Random.secondR<<endl;
 
     return 0;
 }
