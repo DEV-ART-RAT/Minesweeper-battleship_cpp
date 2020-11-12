@@ -2,6 +2,6 @@
 
 int main(void)
 {   
-    cout<<inint();
+    cout<<inputIntRange(0,3);
     return 0;
 }
