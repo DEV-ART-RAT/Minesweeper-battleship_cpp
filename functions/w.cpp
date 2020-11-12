@@ -9,16 +9,21 @@ bool MatrixThreePos(int** matrix, int posR,int posC);
 template <typename T>
 bool MatrixThreePos(T matrix, int posR,int posC){
     int moves=3;
-    int TwoRight=posC+moves,TwoLeft=posC-moves,TwoUp=posR-moves,TwoDown=posR+moves;
-    //cout<<TwoRight<<TwoLeft<<TwoUp<<TwoDown;
+    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves;
+    //cout<<Right<<Left<<Up<<Down;
+    int Mcols,Mrow,MaxCol,MaxRow;
     //right
-    int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
     //Down
-    int Marrow;
-    Marrow=sizeof(matrix[0]);
+    Mrow=sizeof(matrix[0]);
+    MaxCol=Mcols-1;
+    MaxRow=Mrow-1;
+
+    //cout<<"\n-> Columnas:"<<Mcols<<"\t-> Filas:"<<Mrow;
+    //cout<<"\n-> Columnas Max:"<<MaxCol<<"\t-> Fila Max:"<<MaxRow;
+
     //left ; right ; Down ; Up
-    if(TwoLeft<0||TwoRight>Mcols-1 || TwoDown>Marrow-1 || TwoUp<0)
+    if(Left<0||Right>MaxCol || Down>MaxRow || Up<0)
         return false;
     else
         return true;
@@ -26,16 +31,21 @@ bool MatrixThreePos(T matrix, int posR,int posC){
 
 bool MatrixThreePos(int** matrix, int posR,int posC){
     int moves=3;
-    int TwoRight=posC+moves,TwoLeft=posC-moves,TwoUp=posR-moves,TwoDown=posR+moves;
-    //cout<<TwoRight<<TwoLeft<<TwoUp<<TwoDown;
+    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves;
+    //cout<<Right<<Left<<Up<<Down;
+    int Mcols,Mrow,MaxCol,MaxRow;
     //right
-    int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
     //Down
-    int Marrow;
-    Marrow=sizeof(matrix[0]);
+    Mrow=sizeof(matrix[0]);
+    MaxCol=Mcols-1;
+    MaxRow=Mrow-1;
+
+    //cout<<"\n-> Columnas:"<<Mcols<<"\t-> Filas:"<<Mrow;
+    //cout<<"\n-> Columnas Max:"<<MaxCol<<"\t-> Fila Max:"<<MaxRow;
+
     //left ; right ; Down ; Up
-    if(TwoLeft<0||TwoRight>Mcols-1 || TwoDown>Marrow-1 || TwoUp<0)
+    if(Left<0||Right>MaxCol || Down>MaxRow || Up<0)
         return false;
     else
         return true;
@@ -45,10 +55,10 @@ bool MatrixThreePos(int** matrix, int posR,int posC){
 
 /*
 
-  char matrix[8][8]={{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c'}};
+ char matrix[10][10]={{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'},{'a','b','c','c','c','c','c','c','a','b'}};
     
-    for(int i = 0; i < 8; i++){
-        for(int j = 0; j < 8; j++)
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++)
             cout<<"\t"<<((MatrixThreePos(matrix,i,j)==false)? "No":"Yes");
         cout<<"\n";
     }
