@@ -6,29 +6,40 @@ int inputIntRange(int,int);
 int inputIntRange(int min,int max){
     int number;
     cout << "Introduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
-    cin.exceptions(std::istream::failbit);
-    while(true){
-        try{
-            cin>>number;
-            if (!(number <= max && number>=min)) {
-                throw  number;
-                // falla por fuera de rango
-            }
-            else if(number <= max && number>=min){
-                return number;   
-                // se logra meter el numero
-            }
-        }
-        // usuario metio numero pero no el que queriamos
-        catch (int number) {
-        cout <<"\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
-        }
-        // limpiando si el usuario mete cualquier cosa menos un numero
-        catch (std::ios_base::failure &fail) {  
-            cout << "\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
-            cin.clear();
-            std::string tmp;
-            getline(cin, tmp);
-        }
+    do{
+        cin >>number;
+    }while(number<min || number>max);
+    return number;
+};
+
+// Lo estaba validando pero Enmanuel dijo que no, asi que lo dejare porque ya era tarde :v
+
+// int inputIntRange(int min,int max){
+//     int number;
+//     cout << "Introduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
+//     cin.exceptions(std::istream::failbit);
+//     while(true){
+//         try{
+//             cin>>number;
+//             if (!(number <= max && number>=min)) {
+//                 throw  number;
+//                 // falla por fuera de rango
+//             }
+//             else if(number <= max && number>=min){
+//                 return number;   
+//                 // se logra meter el numero
+//             }
+//         }
+//         // usuario metio numero pero no el que queriamos
+//         catch (int number) {
+//         cout <<"\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
+//         }
+//         // limpiando si el usuario mete cualquier cosa menos un numero
+//         catch (std::ios_base::failure &fail) {  
+//             cout << "\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
+//             cin.clear();
+//             std::string tmp;
+//             getline(cin, tmp);
+//         }
     
-}}
+// }}
