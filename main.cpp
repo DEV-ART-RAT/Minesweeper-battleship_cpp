@@ -1,11 +1,7 @@
 #include "tools/0all.h"
 
-
-
 int main(void)
 {   
-    int x=100;
-    initVariable(x,2);
-    cout<<x;
+    cout<<inint();
     return 0;
 }
