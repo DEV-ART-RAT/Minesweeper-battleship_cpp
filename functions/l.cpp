@@ -22,7 +22,7 @@ void MatrixZeroes(T matrix, int size ){
 
 //Main
 /*
- int** matrix=MatrixCuadrada<int>(2);
+    int** matrix=MatrixCuadrada<int>(2);
     MatrixZeroes(matrix,2);
     printMatrix(matrix,2,2);
     */
