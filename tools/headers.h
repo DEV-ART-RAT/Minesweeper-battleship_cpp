@@ -1,5 +1,5 @@
 #include <iostream>
-#include "printarray.h"
+#include "retweet.h"
 #include "../functions/a.cpp"
 #include "../functions/b.cpp"
 #include "../functions/c.cpp"
@@ -9,7 +9,7 @@
 #include "../functions/g.cpp"
 #include "../functions/h.cpp"
  #include "../functions/i.cpp"
-// #include "../functions/j.cpp"
+#include "../functions/j.cpp"
 // #include "../functions/k.cpp"
 // #include "../functions/l.cpp"
 // #include "../functions/m.cpp"
