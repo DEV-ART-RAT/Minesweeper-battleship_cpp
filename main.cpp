@@ -2,6 +2,8 @@
 
 int main(void)
 {   
-    cout<<inputIntRange(0,3);
+    TwoValuesRange d=Two(0,3);
+    cout<<d.first;
+    cout<<d.second;
     return 0;
 }
