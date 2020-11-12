@@ -1,10 +1,10 @@
-#include "tools/0all.h"
+#include "tools/headers.h"
 
 int main(void)
 {   
-    TwoValuesRandom Random=TwoRandom(0,1000);
-    cout<<Random.firstR<<endl;
-    cout<<Random.secondR<<endl;
-
+    char arr[2]={'a','d'};
+    PrintArray(arr,2);
+    ArraySpace(arr,2);
+    PrintArray(arr,2);
     return 0;
 }

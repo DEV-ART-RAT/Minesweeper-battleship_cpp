@@ -1,0 +1,23 @@
+#include <iostream>
+#include "printarray.h"
+#include "../functions/a.cpp"
+#include "../functions/b.cpp"
+#include "../functions/c.cpp"
+#include "../functions/d.cpp"
+#include "../functions/e.cpp"
+#include "../functions/f.cpp"
+#include "../functions/g.cpp"
+#include "../functions/h.cpp"
+ #include "../functions/i.cpp"
+// #include "../functions/j.cpp"
+// #include "../functions/k.cpp"
+// #include "../functions/l.cpp"
+// #include "../functions/m.cpp"
+// #include "../functions/n.cpp"
+// #include "../functions/o.cpp"
+// #include "../functions/p.cpp"
+// #include "../functions/q.cpp"
+// #include "../functions/r.cpp"
+// #include "../functions/s.cpp"
+
+using namespace std;
