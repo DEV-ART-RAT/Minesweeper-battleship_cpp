@@ -10,13 +10,15 @@ void printArrayBarSpace(char *arr,int size);
 
 template <typename T>
 void printArrayBarSpace(T arr,int size){
-    for (int i = 0; i < size; i++)
+     for (int i = 0; i < size-1; i++)
        cout<<arr[i]<<"    |    ";
+    cout<<arr[size-1];
 };
 
 void printArrayBarSpace(char *arr,int size){
-    for (int i = 0; i < size; i++)
+     for (int i = 0; i < size-1; i++)
        cout<<arr[i]<<"    |    ";
+    cout<<arr[size-1];
 };
 
 /*

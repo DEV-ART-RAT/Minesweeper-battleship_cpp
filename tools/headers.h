@@ -20,7 +20,7 @@
 #include "../functions/r.cpp"
 #include "../functions/s.cpp"
 #include "../functions/t.cpp"
-// #include "../functions/u.cpp"
+#include "../functions/u.cpp"
 // #include "../functions/v.cpp"
 // #include "../functions/w.cpp"
 
