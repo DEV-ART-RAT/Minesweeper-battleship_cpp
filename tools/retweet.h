@@ -49,7 +49,10 @@ void printMatrix(T matrix, int sizerows,int sizecols) {
         cout << endl;
 }};
 
-
+template <typename T>
+void MatrixInsertOne(T matrix, int posR,int posC){
+    matrix[posR][posC]=1;
+};
 
 // ESPECIFICAS:
 
@@ -74,3 +77,6 @@ void printMatrix(int** matrix, int sizerows,int sizecols) {
         cout << endl;
     }
 }
+void MatrixInsertOne(int** matrix, int posR,int posC){
+    matrix[posR][posC]=1;
+};

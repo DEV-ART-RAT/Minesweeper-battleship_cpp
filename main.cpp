@@ -2,13 +2,11 @@
 
 int main(void)
 {   
-    char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
-    
-  for(int i = 0; i < 6; i++){
-        for(int j = 0; j < 6; j++)
-            cout<<"\t"<<((MatrixUp(matrix,i,j)==false)? "No":"Yes");
-        cout<<"\n";
-    }
+    int matrix[3][3]={{4,2,3},{4,2,3},{4,2,3}};
+    printMatrix(matrix,3,3);
+    MatrixOneStepInsertOne(matrix,1,1,'d');
+    cout<<"Modificada\n";
+    printMatrix(matrix,3,3);
 
 
     return 0;
