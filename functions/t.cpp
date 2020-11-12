@@ -20,6 +20,11 @@ bool MatrixUp(int** matrix, int posR,int posC){
 }
 //main
 /*
-   char matrix[6][5]={{'a','b','c'},{'d','e','c'},{'a','b','c'},{'a','b','c'},{'d','e','c'},{'a','b','c'}    };
-    cout<<"\n"<<((MatrixUp(matrix,1,3)==false)? "No":"Yes")<<"\n";
-    */
+      char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
+    
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++)
+            cout<<"\t"<<((MatrixUp(matrix,i,j)==false)? "No":"Yes");
+        cout<<"\n";
+    }
+*/

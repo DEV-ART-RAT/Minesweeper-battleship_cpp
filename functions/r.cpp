@@ -25,8 +25,13 @@ bool MatrixRight(int** matrix, int posR,int posC){
 
 //main
 /*
-    char matrix[6][3]={{'a','b','c'},{'d','e','c'},{'a','b','c'},{'a','b','c'},{'d','e','c'},{'a','b','c'}    };
-    cout<<"\n"<<((MatrixRight(matrix,1,1)==false)? "No":"Yes")<<"\n";
+   char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
+    
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++)
+            cout<<"\t"<<((MatrixRight(matrix,i,j)==false)? "No":"Yes");
+        cout<<"\n";
+    }
 */
 
 

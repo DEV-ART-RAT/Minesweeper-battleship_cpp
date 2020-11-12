@@ -21,8 +21,14 @@
 #include "../functions/s.cpp"
 #include "../functions/t.cpp"
 #include "../functions/u.cpp"
-// #include "../functions/v.cpp"
-// #include "../functions/w.cpp"
+#include "../functions/v.cpp"
+#include "../functions/w.cpp"
+#include "../functions/x.cpp"
+#include "../functions/y.cpp"
+#include "../functions/z.cpp"
+
+// #include "../functions/aa.cpp"
+
 
 
 using namespace std;

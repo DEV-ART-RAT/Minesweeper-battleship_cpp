@@ -22,7 +22,12 @@ bool MatrixLeft(int** matrix, int posR,int posC){
 //MAIN
 
 /*
- char matrix[4][3]={{'a','b','c'},{'d','e','c'},{'a','b','c'},{'a','b','c'}};
-    cout<<"\n"<<((MatrixLeft(matrix,0,1)==false)? "No":"Yes")<<"\n";
+  char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
+    
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++)
+            cout<<"\t"<<((MatrixLeft(matrix,i,j)==false)? "No":"Yes");
+        cout<<"\n";
+    }
 
     */

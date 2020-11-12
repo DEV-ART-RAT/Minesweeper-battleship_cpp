@@ -9,7 +9,7 @@ template <typename T>
 bool MatrixDown(T matrix, int posR,int posC){
     int Marrow;
     Marrow=sizeof(matrix[0]);
-    if(posR>=Marrow)
+    if(posR>=Marrow-1)    
         return false;
     else
         return true;
@@ -18,7 +18,7 @@ bool MatrixDown(T matrix, int posR,int posC){
 bool MatrixDown(int** matrix, int posR,int posC){
      int Marrow;
     Marrow=sizeof(matrix[0]);
-    if(posR>=Marrow)
+    if(posR>=Marrow-1)
         return false;
     else
         return true;
@@ -26,7 +26,12 @@ bool MatrixDown(int** matrix, int posR,int posC){
 
 //main
 /*
-     char matrix[6][5]={{'a','b','c'},{'d','e','c'},{'a','b','c'},{'a','b','c'},{'d','e','c'},{'a','b','c'}    };
-    cout<<"\n"<<((MatrixDown(matrix,4,3)==false)? "No":"Yes")<<"\n";
+ char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
+    
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++)
+            cout<<"\t"<<((MatrixDown(matrix,i,j)==false)? "No":"Yes");
+        cout<<"\n";
+    }
 
 */
