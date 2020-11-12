@@ -4,7 +4,7 @@
 template <class TMatrix>
 TMatrix** MatrixCuadrada(int size);
 template <class TArray>
-TArray* MatrixCuadrada(int size);
+TArray* NewArray(int size);
 
 //Print de varios tipos
 template <typename T>
