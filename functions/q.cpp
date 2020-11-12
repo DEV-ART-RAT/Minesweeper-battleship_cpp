@@ -6,17 +6,12 @@ bool MatrixLeft(int** matrix, int posR,int posC);
 
 template <typename T>
 bool MatrixLeft(T matrix, int posR,int posC){
-    if(posC<=0)
-        return false;
-    else
-        return true;
+    return((posC<=0)?false:true);
 };
 
 bool MatrixLeft(int** matrix, int posR,int posC){
-    if(posC<=0)
-        return false;
-    else
-        return true;
+    return((posC<=0)?false:true);
+
 }
 
 //MAIN

@@ -9,19 +9,13 @@ template <typename T>
 bool MatrixDown(T matrix, int posR,int posC){
     int Marrow;
     Marrow=sizeof(matrix[0]);
-    if(posR>=Marrow-1)    
-        return false;
-    else
-        return true;
+    return(posR>=Marrow-1?false:true);    
 };
 
 bool MatrixDown(int** matrix, int posR,int posC){
-     int Marrow;
+    int Marrow;
     Marrow=sizeof(matrix[0]);
-    if(posR>=Marrow-1)
-        return false;
-    else
-        return true;
+    return(posR>=Marrow-1?false:true); 
 }
 
 //main

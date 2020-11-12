@@ -10,46 +10,23 @@ bool MatrixFivePos(int** matrix, int posR,int posC);
 template <typename T>
 bool MatrixFivePos(T matrix, int posR,int posC){
     int moves=5;
-    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves;
-    //cout<<Right<<Left<<Up<<Down;
-    int Mcols,Mrow,MaxCol,MaxRow;
-    //right
-    Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    //Down
-    Mrow=sizeof(matrix[0]);
+    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
+    Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
     MaxCol=Mcols-1;
     MaxRow=Mrow-1;
-
-    //cout<<"\n-> Columnas:"<<Mcols<<"\t-> Filas:"<<Mrow;
-    //cout<<"\n-> Columnas Max:"<<MaxCol<<"\t-> Fila Max:"<<MaxRow;
-
     //left ; right ; Down ; Up
-    if(Left<0||Right>MaxCol || Down>MaxRow || Up<0)
-        return false;
-    else
-        return true;
+    return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
+       
 };
 
 bool MatrixFivePos(int** matrix, int posR,int posC){
-   int moves=5;
-    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves;
-    //cout<<Right<<Left<<Up<<Down;
-    int Mcols,Mrow,MaxCol,MaxRow;
-    //right
-    Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    //Down
-    Mrow=sizeof(matrix[0]);
+    int moves=5;
+    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
+    Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
     MaxCol=Mcols-1;
     MaxRow=Mrow-1;
-
-    //cout<<"\n-> Columnas:"<<Mcols<<"\t-> Filas:"<<Mrow;
-    //cout<<"\n-> Columnas Max:"<<MaxCol<<"\t-> Fila Max:"<<MaxRow;
-
     //left ; right ; Down ; Up
-    if(Left<0||Right>MaxCol || Down>MaxRow || Up<0)
-        return false;
-    else
-        return true;
+    return (Left<0||Right>MaxCol || Down>MaxRow || Up<0)?false:true;
 }
 
 //MAIN

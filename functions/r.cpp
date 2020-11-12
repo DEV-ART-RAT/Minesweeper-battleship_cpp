@@ -8,19 +8,13 @@ template <typename T>
 bool MatrixRight(T matrix, int posR,int posC){
     int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    if(posC>=Mcols-1)
-        return false;
-    else
-        return true;
+    return(posC>=Mcols-1?false:true);
 };
 
 bool MatrixRight(int** matrix, int posR,int posC){
     int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    if(posC>=Mcols-1)
-        return false;
-    else
-        return true;
+    return(posC>=Mcols-1?false:true);
 }
 
 //main

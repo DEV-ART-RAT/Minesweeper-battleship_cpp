@@ -27,7 +27,13 @@
 #include "../functions/y.cpp"
 #include "../functions/z.cpp"
 
-// #include "../functions/aa.cpp"
+// #include "../functions_double/aa.cpp"
+// #include "../functions_double/bb.cpp"
+// #include "../functions_double/cc.cpp"
+// #include "../functions_double/dd.cpp"
+// #include "../functions_double/ee.cpp"
+// #include "../functions_double/ff.cpp"
+// #include "../functions_double/gg.cpp"
 
 
 

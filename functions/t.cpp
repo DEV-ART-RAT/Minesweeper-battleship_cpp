@@ -6,17 +6,11 @@ bool MatrixUp(int** matrix, int posR,int posC);
 
 template <typename T>
 bool MatrixUp(T matrix, int posR,int posC){
-    if(posR<=0)
-        return false;
-    else
-        return true;
+    return(posR<=0?false:true);
 };
 
 bool MatrixUp(int** matrix, int posR,int posC){
-    if(posR<=0)
-        return false;
-    else
-        return true;
+    return(posR<=0?false:true);
 }
 //main
 /*
