@@ -6,7 +6,7 @@ int main(void)
     
     for(int i = 0; i < 16; i++){
         for(int j = 0; j < 16; j++)
-            cout<<((MatrixOnePos(matrix,i,j,'a')==false)? "No":"Yes")<<"\t";
+            cout<<((MatrixTwoPos(matrix,i,j,'u')==false)? "No":"Yes")<<"\t";
         cout<<"\n";
     }
 
