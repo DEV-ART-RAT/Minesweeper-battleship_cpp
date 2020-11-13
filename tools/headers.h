@@ -32,8 +32,30 @@
 #include "../functions/cc.cpp"
 #include "../functions/dd.cpp"
 #include "../functions/ee.cpp"
-// #include "../functions/ff.cpp"
-// #include "../functions/gg.cpp"
+#include "../functions/ff.cpp"
+#include "../functions/gg.cpp"
+#include "../functions/hh.cpp"
+#include "../functions/ii.cpp"
+#include "../functions/jj.cpp"
+#include "../functions/kk.cpp"
+// #include "../functions/ll.cpp"
+// #include "../functions/mm.cpp"
+// #include "../functions/nn.cpp"
+// #include "../functions/oo.cpp"
+// #include "../functions/pp.cpp"
+// #include "../functions/qq.cpp"
+// #include "../functions/rr.cpp"
+// #include "../functions/ss.cpp"
+// #include "../functions/tt.cpp"
+// #include "../functions/uu.cpp"
+// #include "../functions/vv.cpp"
+// #include "../functions/ww.cpp"
+// #include "../functions/xx.cpp"
+// #include "../functions/yy.cpp"
+
+
+
+
 
 
 

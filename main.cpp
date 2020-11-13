@@ -2,11 +2,11 @@
 
 int main(void)
 {   
-    int matrix[3][3]={{4,2,3},{4,2,3},{4,2,3}};
-    printMatrix(matrix,3,3);
-    MatrixTwoStepInsertOne(matrix,0,0,'r');
+    int matrix[8][8]={{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3},{4,2,3,3,4,3,4,3}};
+    printMatrix(matrix,8,8);
+    MatrixThreeStepInsertOne(matrix,0,0,'r');
     cout<<"Modificada\n";
-    printMatrix(matrix,3,3);
+    printMatrix(matrix,8,8);
 
     return 0;
 }

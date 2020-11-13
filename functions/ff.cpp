@@ -34,3 +34,12 @@ void MatrixTwoStepInsertOne(T matrix, int posR,int posC,char pos){
         break;
     }
 };
+/*
+
+int matrix[3][3]={{4,2,3},{4,2,3},{4,2,3}};
+    printMatrix(matrix,3,3);
+    MatrixTwoStepInsertOne(matrix,0,0,'r');
+    cout<<"Modificada\n";
+    printMatrix(matrix,3,3);
+
+    */
