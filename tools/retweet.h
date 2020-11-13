@@ -1,4 +1,5 @@
 #include "tools.h"
+#define print(a) (cout<<a<<"\n")
 
 //inicializar
 template <class TMatrix>
@@ -28,6 +29,15 @@ TMatrix** MatrixCuadrada(int size){
     return doublepointer;
 };
 
+template <class TMatrix>
+TMatrix** Matrix(int row,int col){
+    TMatrix** doublepointer;
+    doublepointer = new TMatrix*[col];    
+    for (int i=0;i<col;i++){
+        doublepointer[i]=new TMatrix [row];
+    };
+    return doublepointer;
+};
 template <class TArray>
 TArray* NewArray(int size){
     TArray* pointer = new TArray[size];    
@@ -56,14 +66,7 @@ void MatrixInsertOne(T matrix, int posR,int posC){
 
 // ESPECIFICAS:
 
-char** MatrixCuadrada(int size){
-    char** doublepointer;
-    doublepointer = new char*[size];    
-    for (int i=0;i<size;i++){
-        doublepointer[i]=new char [size];
-    };
-    return doublepointer;
-};
+
 
 void printArray(char *arr,int size){
     for (int i = 0; i < size; i++)

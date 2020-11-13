@@ -14,7 +14,7 @@ bool MatrixDown(T matrix, int posR,int posC){
 
 bool MatrixDown(int** matrix, int posR,int posC){
     int Marrow;
-    Marrow=sizeof(matrix[0]);
+    Marrow=sizeof(matrix) / sizeof(matrix[0]);
     return(posR>=Marrow-1?false:true); 
 }
 

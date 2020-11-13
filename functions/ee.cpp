@@ -54,10 +54,10 @@ void MatrixOneStepInsertOne(int** matrix, int posR,int posC,char pos){
 }
 /*
 
-    int matrix[3][3]={{4,2,3},{4,2,3},{4,2,3}};
-    printMatrix(matrix,3,3);
-    MatrixOneStepInsertOne(matrix,1,1,'d');
-    cout<<"Modificada\n";
-    printMatrix(matrix,3,3);
-
+    int** matrix=MatrixCuadrada<int>(10);
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++)
+            cout<<((MatrixNumberPos(matrix,i,j,1,'u')==false)? "No":"Yes")<<"\t";
+        cout<<"\n";
+    }
 */
