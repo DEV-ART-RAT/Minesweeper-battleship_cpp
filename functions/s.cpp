@@ -1,31 +1,17 @@
-//s) Modifique q) para en lugar de checar a la izquierda, se chequee abajo.
+#include "../tools/header.h"
+#include "../tools/tools.h"
 
-template <typename T>
-bool MatrixDown(T matrix, int posR,int posC);
+//q) Hacer una función en C++ que dada una matriz int y una posición en la matriz, chequee si es
+//posible acceder 1 celda a la izquierda de esta posición.
 
-bool MatrixDown(int** matrix, int posR,int posC);
-
-template <typename T>
+bool MatrixDownStepValidation(int** array, int i, int size){
+    return  i < size ;
+}
+/*
+ *  template <typename T>
 bool MatrixDown(T matrix, int posR,int posC){
     int Marrow;
     Marrow=sizeof(matrix[0]);
-    return(posR>=Marrow-1?false:true);    
+    return(posR>=Marrow-1?false:true);
 };
-
-bool MatrixDown(int** matrix, int posR,int posC){
-    int Marrow;
-    Marrow=sizeof(matrix) / sizeof(matrix[0]);
-    return(posR>=Marrow-1?false:true); 
-}
-
-//main
-/*
- char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
-    
-    for(int i = 0; i < 6; i++){
-        for(int j = 0; j < 6; j++)
-            cout<<"\t"<<((MatrixDown(matrix,i,j)==false)? "No":"Yes");
-        cout<<"\n";
-    }
-
-*/
+ */

@@ -1,28 +1,19 @@
-//n) Modifique m) para que, en lugar de separar cada dato con espacio,
-// los separe con el caracter de barra ( ‘|’ ).
+#include "../tools/header.h"
+#include "../tools/tools.h"
 
-//para todo tipo
-template <typename T>
-void printArrayBar(T arr,int size);
-//para char
-void printArrayBar(char *arr,int size);
+//n) Modifique m) para que, en lugar de separar cada dato con espacio, los separe con el caracter de
+//barra ( ‘|’ ).
 
-
-template <typename T>
+void printArrayCharBar(char* array, int b){
+    for(int i = 0 ; i < b ; i++){
+        std::cout << array[i] << "|";
+    }   
+}
+// otra forma
+/*
+ * template <typename T>
 void printArrayBar(T arr,int size){
     for (int i = 0; i < size; i++)
        cout<<arr[i]<<"|";
 };
-
-void printArrayBar(char *arr,int size){
-    for (int i = 0; i < size; i++)
-       cout<<arr[i]<<"|";
-};
-
-/*
-
-    char* array =NewArray<char>(3);
-    ArraySpace(array,3);
-    printArrayBar(array,3);
-
-    */
+ */

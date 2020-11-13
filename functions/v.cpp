@@ -1,16 +1,29 @@
-//v) Modificar los casos q), r), s) y t) para que, en lugar de checar
-// una celda en la dirección indicada, chequee si es posible avanzar 2 celdas en dicha dirección.
+#include "../tools/header.h"
+#include "../tools/tools.h"
+//v) Modificar los casos q), r), s) y t) para que, en lugar de checar una celda en la dirección indicada,
+//chequee si es posible avanzar 2 celdas en dicha dirección.
 
-template <typename T>
-bool MatrixTwoPos(T matrix, int posR,int posC,char pos);
+bool MatrixLeftTwoStepValidation(int** array, int i, int size){
+    return  i >= 1 ;
+}
 
-bool MatrixTwoPos(int** matrix, int posR,int posC,char pos);
+bool MatrixRightTwoStepValidation(int** array, int i , int size){
+    return  i < size -1 ;
+}
 
-template <typename T>
+bool MatrixDownTwoStepValidation(int** array, int i, int size){
+    return  i < size -1 ;
+}
+
+bool MatrixUpTwoStepValidation(int** array, int i, int size){
+    return  i >= 1 ;
+}
+/* Invento
+ * template <typename T>
 bool MatrixTwoPos(T matrix, int posR,int posC,char pos){
     posR,posC-=1;
     int moves=2;
-    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;   
+    int Right=posC+moves,Left=posC-moves,Up=posR-moves,Down=posR+moves,Mcols,Mrow,MaxCol,MaxRow;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);Mrow=sizeof(matrix[0]);
      MaxCol=Mcols-1;
     MaxRow=Mrow-1;
@@ -34,17 +47,4 @@ bool MatrixTwoPos(T matrix, int posR,int posC,char pos){
         break;
     }
 }
-
-//main
-
-/*
-
-  char matrix[16][16]={{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'}};
-    
-    for(int i = 0; i < 16; i++){
-        for(int j = 0; j < 16; j++)
-            cout<<((MatrixTwoPos(matrix,i,j,'u')==false)? "No":"Yes")<<"\t";
-        cout<<"\n";
-    }
-
-*/
+ */

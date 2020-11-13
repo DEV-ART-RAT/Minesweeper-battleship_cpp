@@ -1,8 +1,15 @@
-//c) Hacer una función en C++ que le pida al usuario un número entero y retorne este valor.
+#include "../tools/header.h"
 #include "../tools/tools.h"
-int inputInt();
-int inputInt(){
-    int number;
-    cin>>number;
-    return number;
+//c) Hacer una función en C++ que le pida al usuario un número entero y retorne este valor.
+int c();
+
+int c(){
+    int integer;
+    cout << "Ingrese un Numero : " << endl;
+    //validamos el entero;
+    ValidationOfInt(integer);
+    return integer;
 }
+
+
+

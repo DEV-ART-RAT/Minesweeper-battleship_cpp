@@ -1,38 +1,17 @@
-// r) Modifique q) para en lugar de checar a la izquierda, se chequee a la derecha.
-template <typename T>
-bool MatrixRight(T matrix, int posR,int posC);
+#include "../tools/header.h"
+#include "../tools/tools.h"
 
-bool MatrixRight(int** matrix, int posR,int posC);
+//q) Hacer una función en C++ que dada una matriz int y una posición en la matriz, chequee si es
+//posible acceder 1 celda a la izquierda de esta posición.
 
-template <typename T>
+bool MatrixRightStepValidation(int** array, int i , int size){
+    return  i < size ;
+}
+/*
+ * template <typename T>
 bool MatrixRight(T matrix, int posR,int posC){
     int Mcols;
     Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
     return(posC>=Mcols-1?false:true);
 };
-
-bool MatrixRight(int** matrix, int posR,int posC){
-    int Mcols;
-    Mcols=sizeof(matrix[0])/sizeof(matrix[0][0]);
-    return(posC>=Mcols-1?false:true);
-}
-
-//main
-/*
-   char matrix[6][6]={{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'},{'a','b','c','c','c','c'}};
-    
-    for(int i = 0; i < 6; i++){
-        for(int j = 0; j < 6; j++)
-            cout<<"\t"<<((MatrixRight(matrix,i,j)==false)? "No":"Yes");
-        cout<<"\n";
-    }
-*/
-
-
-
-
-
-
-
-
-//Ayuda : https://stackoverflow.com/questions/34134074/c-size-of-two-dimensional-array/34135270
+ */

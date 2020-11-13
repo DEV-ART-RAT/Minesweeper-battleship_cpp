@@ -1,8 +1,10 @@
-//f) Hacer una función en C++ que genere y retorne un número entero aleatorio.
+#include "../tools/header.h"
 #include "../tools/tools.h"
 
-int intRandom(){
+//f) Hacer una función en C++ que genere y retorne un número entero aleatorio.
+//(cargado)
+int generatorRandom();
+
+int generatorRandom(){   
     return rand();
 }
-// Main
-//     cout<<intRandom();

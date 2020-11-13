@@ -1,20 +1,22 @@
-//Modifique c = (Hacer una función en C++ que le pida al usuario
-//un número entero y retorne este valor.) para que el entero solicitado 
-// se encuentre dentro de un rango [A,B], donde A y B serán nuevos parámetros para la función.
+#include "../tools/header.h"
 #include "../tools/tools.h"
-int inputIntRange(int,int);
-int inputIntRange(int min,int max){
-    int number;
-    cout << "Introduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
-    do{
-        cin >>number;
-    }while(number<min || number>max);
-    return number;
-};
+//d) Modifique c) para que el entero solicitado se encuentre dentro de un rango [A,B], donde A y B
+//serán nuevos parámetros para la función.
+int d(int a, int b);
 
-// Lo estaba validando pero Enmanuel dijo que no, asi que lo dejare porque ya era tarde :v
+int d(int a, int b)
+{
+    int dato = a -1;
+    cout << "Introduzca un numero en el rango: ("<< a <<" , "<< b <<") " <<endl;
+    while(dato < a || dato > b){
+        ValidationOfInt(dato);
+    };
+    return dato;
+}
 
-// int inputIntRange(int min,int max){
+// Lo estaba validando de otra forma :VV
+
+// int getInt(int min,int max){
 //     int number;
 //     cout << "Introduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
 //     cin.exceptions(std::istream::failbit);
@@ -26,7 +28,7 @@ int inputIntRange(int min,int max){
 //                 // falla por fuera de rango
 //             }
 //             else if(number <= max && number>=min){
-//                 return number;   
+//                 return number;
 //                 // se logra meter el numero
 //             }
 //         }
@@ -35,11 +37,11 @@ int inputIntRange(int min,int max){
 //         cout <<"\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
 //         }
 //         // limpiando si el usuario mete cualquier cosa menos un numero
-//         catch (std::ios_base::failure &fail) {  
+//         catch (std::ios_base::failure &fail) {
 //             cout << "\nIntroduzca un numero en el rango: ["<<min<<","<<max<<"]" << endl;
 //             cin.clear();
 //             std::string tmp;
 //             getline(cin, tmp);
 //         }
-    
+
 // }}

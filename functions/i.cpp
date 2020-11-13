@@ -1,6 +1,22 @@
-//i) Hacer una función en C++ que dado un arreglo de char y su longitud, 
-// llene cada casilla con el caracter espacio ( ‘ ‘ ).
+#include "../tools/header.h"
 #include "../tools/tools.h"
+
+//i) Hacer una función en C++ que dado un arreglo de char y su longitud, llene cada casilla con el
+//caracter espacio ( ‘ ‘ ).
+void setSpacesArray(char* array, int b);
+char* newCharPointer(int b);
+
+void setSpacesArray(char* array, int b){
+    for(int i = 0 ; i < b ; i++){
+        array[i]=' ';
+    }   
+}
+//se crea el nuevo char
+char* newCharPointer(int b){
+    return new char[b];
+}
+//No me sirvio
+/*
 void ArraySpace(char*,int);
 template <typename T>
 void ArraySpace(T arr,int size);
@@ -17,10 +33,4 @@ void ArraySpace(T arr,int size){
     for (int i = 0; i < size; i++)
        arr[i]=' ';
 };
-/*
-    char arr[2]={'a','d'};
-    PrintArray(arr,2);
-    ArraySpace(arr,2);
-    PrintArray(arr,2);
-
-*/
+ */

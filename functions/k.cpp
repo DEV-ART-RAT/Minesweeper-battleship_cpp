@@ -1,27 +1,22 @@
-//k) Hacer una función en C++ que dado un arreglo de int 
-// y su longitud, llene cada casilla con un 0.
+#include "../tools/header.h"
 #include "../tools/tools.h"
-void ArraySpace(int*,int);
-template <typename T>
-void ArraySpace(T arr,int size);
+//k) Hacer una función en C++ que dado un arreglo de int y su longitud, llene cada casilla con un 0.
 
-//para int
-void ArrayZero(int *arr,int size){
-    for (int i = 0; i < size; i++)
-       arr[i]=0;
+void setZeroesArray(int* array, int b){
+    for(int i = 0 ; i < b ; i++){
+        array[i]=0;
+    }   
+}
+//comenzamos un puntero
+int* newIntPointer(int b){
+    return new int[b];
 }
 
-//para cualquier tipo
-template <typename T>
+//Pruebas:
+/*
+ * template <typename T>
 void ArrayZero(T arr,int size){
     for (int i = 0; i < size; i++)
        arr[i]=0;
 };
-
-// MAIN
-/*
-int* array =NewArray<int>(3);
-ArrayZero(array,3);
-printArray(array,3);
-
-    */
+ */
