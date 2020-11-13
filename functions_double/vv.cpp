@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
-
+/*
+vv) Modificar Quicksort para que sea capaz de ordenar descendentemente una lista como la descrita
+en tt) , usando como criterio de comparación la cadena de caracteres (orden lexicográfico) que
+hay en cada nodo.
+*/
 struct nodeinfo {
     int i;
     string c;

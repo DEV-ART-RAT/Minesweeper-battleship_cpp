@@ -6,18 +6,21 @@
 bool MatrixLeftTwoStepValidation(int** array, int i, int size){
     return  i >= 1 ;
 }
-
 bool MatrixRightTwoStepValidation(int** array, int i , int size){
     return  i < size -1 ;
 }
-
 bool MatrixDownTwoStepValidation(int** array, int i, int size){
     return  i < size -1 ;
 }
-
 bool MatrixUpTwoStepValidation(int** array, int i, int size){
     return  i >= 1 ;
 }
+
+bool v(int** array, int i, int j, int size){
+    return  MatrixLeftTwoStepValidation(array,j,size) && MatrixRightTwoStepValidation(array,j,size) 
+    && MatrixUpTwoStepValidation(array,i,size) && MatrixDownTwoStepValidation(array,i,size);
+}
+
 /* Invento
  * template <typename T>
 bool MatrixTwoPos(T matrix, int posR,int posC,char pos){

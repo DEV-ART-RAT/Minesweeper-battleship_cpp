@@ -5,27 +5,27 @@
 //sería el número de filas y columnas.
 
 // Matrix Zeroes
-void setZeroesMatrix(int** array, int b){
-    for(int i = 0; i < b; i++) {
-        array[i]= new int[b];
-        for(int j = 0; j < b; j++)
-            array[i][j]=0;
+void setZeroesMatrix(int** pointer, int size){
+    for(int i = 0; i < size; i++) {
+        pointer[i]= new int[size];
+        for(int j = 0; j < size; j++)
+            pointer[i][j]=0;
     }
 }
 // doble puntero inicializado
-int** newIntDoublePointer(int b){
+int** newIntDoublePointer(int size){
     int** doublePointer;
-    doublePointer = new int* [b];
-    for(int i = 0; i < b; i++)
-        doublePointer[i] = new int [b];
+    doublePointer = new int* [size];
+    for(int i = 0; i < size; i++)
+        doublePointer[i] = new int [size];
         return doublePointer;
 }
 
-void  l(int*** array, int b){
+void  l(int*** pointer, int size){
     //comenzamos el puntero
-    *array = newIntDoublePointer(b);
+    *pointer = newIntDoublePointer(size);
     //ahora la matriz de zeroes
-    setZeroesMatrix(*array,b);
+    setZeroesMatrix(*pointer,size);
 }
 
 // intentos

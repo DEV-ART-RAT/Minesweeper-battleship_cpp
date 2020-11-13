@@ -4,8 +4,8 @@
 //o) Modifique n) para que se agregue un margen de 4 espacios a la izquierda y derecha de cada barra
 //colocada ( ‘ | ‘).
 
-void printArrayCharBarSpace(char* array, int b){
-    for(int i = 0 ; i < b ; i++){
+void printArrayCharBarSpace(char* array, int size){
+    for(int i = 0 ; i < size ; i++){
         std::cout << array[i] << "    |    ";
     }   
 }

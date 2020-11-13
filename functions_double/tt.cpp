@@ -7,12 +7,10 @@ using namespace std;
 template<class T>
 struct doubleLinked {
     node<T>* front,* back;
-
     doubleLinked () {
         front = back = NULL;
     }
 };
-
 template<class T>
 void pushFront(T info, doubleLinked<T>* dl) {
     node<T>* n = new node<T>;

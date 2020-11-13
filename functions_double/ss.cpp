@@ -10,13 +10,11 @@ motivos estéticos).
 */
 
 void ss(char** N, int n){
-
     for (int i = 0; i < n; i++)
     {
         printArrayCharBarMargin(N[i],n);
         std::cout << "\n" ;
     }
-    
 
 }
 

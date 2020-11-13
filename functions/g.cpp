@@ -3,9 +3,9 @@
 
 //g) Modifique f) para que el entero generado se encuentre dentro de un rango [A,B], donde A y B
 //serán nuevos parámetros para la función.
-int generatorRandom(int a, int b);
+int generatorRandom(int min, int max);
 
-//(cargado con f)
-int generatorRandom(int a, int b){   
-    return rand() % (b - a + 1) + a;
+//(operador sobrecargado con f)  )
+int generatorRandom(int min, int max){   
+    return rand() % (max - min + 1) + min;
 }

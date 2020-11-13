@@ -3,10 +3,11 @@
 
 //h) Modifique g) para que, en lugar de generar un entero, genere dos, y retorne ambos.
 
-pair<int,int> generatorTwoRandom(int a, int b);
+pair<int,int> generatorTwoRandom(int min, int max);
 
-pair<int,int> generatorTwoRandom(int a, int b){ 
-    return pair<int ,int> (rand() % (b - a + 1) + a, rand() % (b - a + 1) + a);
+//genera un par de numeros al azar
+pair<int,int> generatorTwoRandom(int min, int max){ 
+    return pair<int ,int> (rand() % (max - min + 1) + min, rand() % (max - min + 1) + min);
 }
 //Tambien intente de otra forma
 

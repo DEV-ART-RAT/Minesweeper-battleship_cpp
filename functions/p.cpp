@@ -4,12 +4,14 @@
 //p) Modifique o) para que también se agreguen barras al inicio y al final de la secuencia impresa, con
 //sus respectivos márgenes (que en este caso serían a un solo lado).
 
-void printArrayCharBarMargin(char* array, int b){
+void printArrayCharBarMargin(char* array, int size){
+    //imprimimos la primera parte
     cout<<"|    ";
-    for(int i = 0 ; i < b - 1 ; i++){
+    for(int i = 0 ; i < size - 1 ; i++){
         std::cout << array[i] << "    |    ";
     }   
-    cout<<array[b-1]<<"    |";
+    //imprimimos el final y admeas el ultimo elemento
+    cout<<array[size-1]<<"    |";
 }
 
 // otra forma:

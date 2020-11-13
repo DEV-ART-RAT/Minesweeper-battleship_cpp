@@ -4,8 +4,8 @@
 //n) Modifique m) para que, en lugar de separar cada dato con espacio, los separe con el caracter de
 //barra ( ‘|’ ).
 
-void printArrayCharBar(char* array, int b){
-    for(int i = 0 ; i < b ; i++){
+void printArrayCharBar(char* array, int size){
+    for(int i = 0 ; i < size ; i++){
         std::cout << array[i] << "|";
     }   
 }

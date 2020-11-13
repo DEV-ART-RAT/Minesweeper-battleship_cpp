@@ -4,19 +4,19 @@
 //e) Modifique d) para que, en lugar de pedir un entero, pida dos, y retorne ambos.
 pair<int, int> e(int a, int b);
 
-pair<int, int> e(int a, int b) {
+pair<int, int> e(int min, int max) {
      //pedimos dos datos que son el rango
     int dato = 0,number=0;
-    cout << "Introduzca un numero en el rango: ("<< a <<" , "<< b <<") Para la Fila :" <<endl;
+    cout << "Introduzca un numero en el rango: ("<< min <<" , "<< max <<") Para la Fila :" <<endl;
     //while que valida el dato en los rangos
     do{     
         ValidationOfInt(dato);
-    }while(dato < a || dato > b);
-    cout << "Introduzca un numero en el rango: ("<< a <<" , "<< b <<") Para la Columna :" <<endl;
+    }while(dato < min || dato > max);
+    cout << "Introduzca un numero en el rango: ("<< min <<" , "<< max <<") Para la Columna :" <<endl;
     //while que valida el dato en los rangos
     do{     
         ValidationOfInt(number);
-    }while(number < a || number > b);
+    }while(number < min || number > max);
     return pair<int ,int> (dato, number);
 }
 // intente de otra forma

@@ -4,27 +4,30 @@
 //j) Modifique i) para que, en lugar de un arreglo, se reciba una matriz cuadrada y un número n, que
 //sería el número de filas y columnas.
 
-void setSpacesMatrix(char** array, int b){
-    for(int i = 0; i < b; i++) {
-        for(int j = 0; j < b; j++)
-            array[i][j]=' ';
+// genera una matriz de espacios
+void setSpacesMatrix(char** pointer, int size){
+    for(int i = 0; i < size; i++) {
+        for(int j = 0; j < size; j++)
+            pointer[i][j]=' ';
     }
 }
 
-char** newCharDoublePointer(int b){
+//inicializa el puntero
+char** newCharDoublePointer(int size){
     //inicializamos el puntero doble
     char** doublePointer;
-    doublePointer = new char* [b];
-    for(int i = 0; i < b; i++)
-        doublePointer[i] = new char [b];
+    doublePointer = new char* [size];
+    for(int i = 0; i < size; i++)
+        doublePointer[i] = new char [size];
         return doublePointer;
 }
 
-void j(char*** array, int b){
+//funcion que controla j
+void j(char*** pointer, int size){
     //inicializamos los datos para j
-    *array=newCharDoublePointer(b);
+    *pointer=newCharDoublePointer(size);
     //obtenemos la matriz
-    setSpacesMatrix(*array,b);
+    setSpacesMatrix(*pointer,size);
 }
 // NO ME SIRVIO
 /*

@@ -3,17 +3,18 @@
 
 //i) Hacer una función en C++ que dado un arreglo de char y su longitud, llene cada casilla con el
 //caracter espacio ( ‘ ‘ ).
-void setSpacesArray(char* array, int b);
-char* newCharPointer(int b);
+void setSpacesArray(char* array, int size);
+char* newCharPointer(int size);
 
-void setSpacesArray(char* array, int b){
-    for(int i = 0 ; i < b ; i++){
+//genera un array de espacios
+void setSpacesArray(char* array, int size){
+    for(int i = 0 ; i < size ; i++){
         array[i]=' ';
     }   
 }
 //se crea el nuevo char
-char* newCharPointer(int b){
-    return new char[b];
+char* newCharPointer(int size){
+    return new char[size];
 }
 //No me sirvio
 /*
