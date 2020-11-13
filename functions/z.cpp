@@ -5,16 +5,16 @@
 //los casos
 
 bool MatrixLeftStepValidation(int** array, int i, int size, int caso){
-    return  i >= caso - 1 ;
+    return  A_MENOR_IGUAL_B(caso-1,i) ;
 }
 bool MatrixRightStepValidation(int** array, int i , int size, int caso){
-    return  i < size - caso -1 ;
+    return  A_MENOR_B(i,size-caso-1) ;
 }
 bool MatrixDownStepValidation(int** array, int i, int size, int caso){
-    return  i < size - caso -1 ;
+    return  A_MENOR_B(i,size-caso-1) ;
 }
 bool MatrixUpStepValidation(int** array, int i, int size, int caso){
-    return  i >= caso -1 ;
+    return  A_MENOR_IGUAL_B(caso-1,i) ;
 }
 bool z(int** array, int i, int j, int size, int caso){
     return  MatrixLeftStepValidation(array,j,size,caso) && MatrixRightStepValidation(array,j,size,caso) 

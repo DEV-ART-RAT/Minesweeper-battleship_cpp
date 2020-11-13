@@ -7,7 +7,7 @@ pair<int,int> generatorTwoRandom(int min, int max);
 
 //genera un par de numeros al azar
 pair<int,int> generatorTwoRandom(int min, int max){ 
-    return pair<int ,int> (rand() % (max - min + 1) + min, rand() % (max - min + 1) + min);
+    return pair<int ,int> (RANDOM_RANGE(min,max), RANDOM_RANGE(min,max));
 }
 //Tambien intente de otra forma
 

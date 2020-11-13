@@ -14,8 +14,8 @@ void printArrayCharBarSpace(char* array, int size){
 /*
  * template <typename T>
 void printArrayBarSpace(T arr,int size){
-     for (int i = 0; i < size-1; i++)
+     for (int i = 0; i < SIZEONE(size); i++)
        cout<<arr[i]<<"    |    ";
-    cout<<arr[size-1];
+    cout<<arr[SIZEONE(size)];
 };
  */

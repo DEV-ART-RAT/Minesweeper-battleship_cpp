@@ -4,16 +4,16 @@
 //chequee si es posible avanzar 2 celdas en dicha dirección.
 
 bool MatrixLeftTwoStepValidation(int** array, int i, int size){
-    return  i >= 1 ;
+    return  A_MENOR_IGUAL_B(1,i) ;
 }
 bool MatrixRightTwoStepValidation(int** array, int i , int size){
-    return  i < size -1 ;
+    return  A_MENOR_B(i,SIZEONE(size)) ;
 }
 bool MatrixDownTwoStepValidation(int** array, int i, int size){
-    return  i < size -1 ;
+    return  A_MENOR_B(i,SIZEONE(size)) ;
 }
 bool MatrixUpTwoStepValidation(int** array, int i, int size){
-    return  i >= 1 ;
+    return  A_MENOR_IGUAL_B(1,i);
 }
 
 bool v(int** array, int i, int j, int size){

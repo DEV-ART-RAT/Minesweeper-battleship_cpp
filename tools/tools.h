@@ -3,6 +3,7 @@
 #pragma once
 using namespace std;
 
+//verifica el numero cuando pide fila/columna
 void ValidationOfInt(int& dato){ 
     try{
         cin>>dato;}

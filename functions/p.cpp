@@ -7,11 +7,11 @@
 void printArrayCharBarMargin(char* array, int size){
     //imprimimos la primera parte
     cout<<"|    ";
-    for(int i = 0 ; i < size - 1 ; i++){
+    for(int i = 0 ; i < SIZEONE(size) ; i++){
         std::cout << array[i] << "    |    ";
     }   
     //imprimimos el final y admeas el ultimo elemento
-    cout<<array[size-1]<<"    |";
+    cout<<array[SIZEONE(size)]<<"    |";
 }
 
 // otra forma:
@@ -19,8 +19,8 @@ void printArrayCharBarMargin(char* array, int size){
  * template <typename T>
 void printArrayBarSpaceMargin(T arr,int size){
       cout<<"|    ";
-    for (int i = 0; i < size-1; i++)
+    for (int i = 0; i < SIZEONE(size); i++)
        cout<<arr[i]<<"    |    ";
-    cout<<arr[size-1]<<"    |";
+    cout<<arr[SIZEONE(size)]<<"    |";
 };
  */

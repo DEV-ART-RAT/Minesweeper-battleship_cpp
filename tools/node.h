@@ -3,6 +3,8 @@
 #pragma once
 using namespace std;
 
+
+//importamos funcion de nodo para listas dobles
 struct nodeinfo {
     int i;
     string c;

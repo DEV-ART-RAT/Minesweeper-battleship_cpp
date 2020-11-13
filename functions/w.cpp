@@ -5,16 +5,16 @@
 //chequee si es posible avanzar 3 celdas en dicha dirección.
 
 bool MatrixLeftThreeStepValidation(int** array, int i, int size){
-    return  i >= 2 ;
+    return  A_MENOR_IGUAL_B(2,i) ;
 }
 bool MatrixRightThreeStepValidation(int** array, int i , int size){
-    return  i < size -2 ;
+    return  A_MENOR_B(i,size-2)  ;
 }
 bool MatrixDownThreeStepValidation(int** array, int i, int size){
-    return  i < size -2 ;
+    return  A_MENOR_B(i,size-2)  ;
 }
 bool MatrixUpThreeStepValidation(int** array, int i, int size){
-    return  i >= 2 ;
+    return  A_MENOR_IGUAL_B(2,i) ;
 }
 bool w(int** array, int i, int j, int size){
     return  MatrixLeftThreeStepValidation(array,j,size) && MatrixRightThreeStepValidation(array,j,size) 

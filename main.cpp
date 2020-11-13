@@ -14,6 +14,10 @@ typedef int **MatrixInt;
     Ya segun yo terminado diria que es una especie de battleship pero como es de una sola persona
     podria ser un buscaminas un poco extrano?
  */
+/*
+Colocar los nexos que hagan falta para que el código final sea ejecutable.
+-- codigo hecho en linux por lo que nose si podria dar problemas las rutas.
+*/
 
 int main(void)
 {
@@ -25,7 +29,7 @@ int main(void)
     MatrixInt M2;
     int P, C;
     //tamanio de tablero
-    int SIZE = 8;
+    int SIZE = 7;
     //Doble lista enlazada de tipo node
     doubleLinked<nodeinfo> list;
 
@@ -60,7 +64,7 @@ int main(void)
     quickSort(list.front);
     //Ejecutar ww)
     ww(&list);
-    //ejecutar yy)
+    //Ejecutar yy)
     yy(list.front);
 
     return 0;

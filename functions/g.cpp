@@ -7,5 +7,5 @@ int generatorRandom(int min, int max);
 
 //(operador sobrecargado con f)  )
 int generatorRandom(int min, int max){   
-    return rand() % (max - min + 1) + min;
+    return RANDOM_RANGE(min,max);
 }

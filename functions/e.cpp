@@ -6,18 +6,18 @@ pair<int, int> e(int a, int b);
 
 pair<int, int> e(int min, int max) {
      //pedimos dos datos que son el rango
-    int dato = 0,number=0;
+    int first = 0,second=0;
     cout << "Introduzca un numero en el rango: ("<< min <<" , "<< max <<") Para la Fila :" <<endl;
     //while que valida el dato en los rangos
     do{     
-        ValidationOfInt(dato);
-    }while(dato < min || dato > max);
+        ValidationOfInt(first);
+    }while(A_MENOR_B(first,min)||A_MENOR_B(max,first));
     cout << "Introduzca un numero en el rango: ("<< min <<" , "<< max <<") Para la Columna :" <<endl;
     //while que valida el dato en los rangos
     do{     
-        ValidationOfInt(number);
-    }while(number < min || number > max);
-    return pair<int ,int> (dato, number);
+        ValidationOfInt(second);
+    }while(A_MENOR_B(second,min)||A_MENOR_B(max,second));
+    return pair<int ,int> (first, second);
 }
 // intente de otra forma
 //struct TwoValuesRange { int first;int second; };

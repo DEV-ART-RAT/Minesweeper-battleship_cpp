@@ -5,7 +5,7 @@
 //posible acceder 1 celda a la izquierda de esta posición.
 
 bool MatrixUpStepValidation(int** array, int i, int size){
-    return  i >= 0 ;
+    return  A_MENOR_IGUAL_B(0,i) ;
 }
 /*
  * template <typename T>
