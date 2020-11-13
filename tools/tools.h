@@ -5,21 +5,19 @@ using namespace std;
 
 void ValidationOfInt(int& dato){ 
     try{
-        cout<<"Porfavor Digite un numero entero.\n";
         cin>>dato;}
     catch(exception e)
     {
-        cout<<"Porfavor Digite un numero entero.\n";
+        cout<<"Porfavor Digite un numero entero dentro del rango.\n";
         ValidationOfInt(dato);
     }
 }
 void ValidationOfString(string& dato){ 
     try{
-        cout<<"Porfavor Digite un numero entero.\n";
         cin>>dato;}
     catch(exception e)
     {
-        cout<<"Porfavor Digite un numero entero.\n";
+        cout<<"Porfavor Digite un  string.\n";
         ValidationOfString(dato);
     }
 }

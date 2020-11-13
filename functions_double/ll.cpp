@@ -20,27 +20,19 @@ bool llAux(int** array, int size,int rando){
     switch (rando){
         case 1:
             return ggaa(array, data.first, data.second, size);
-            //break;
         case 2:
             return ggbb(array, data.first, data.second, size);
-            //break;
         case 3:
             return ggcc(array, data.first, data.second, size);
-            //break;
         case 4:
             return ggdd(array, data.first, data.second, size);
-            //break;
         default:
             return false;
     }
 }
 
 void ll(int** array, int size){
-    int myRandom = generatorRandom(1,4); //Usando g para obtener numero aleatorio
-    while (!llAux(array,size,myRandom))
-    {
-        /* code */
-    }
-    
+    int random1_4 = generatorRandom(1,4);
+    llAux(array,size,random1_4);
 }
 

@@ -5,17 +5,18 @@
 pair<int, int> e(int a, int b);
 
 pair<int, int> e(int a, int b) {
-    int number = a -1, dato;
-    cout << "Numero de Fila: ("<< a <<" , "<< b <<") : ";
-    while(number < a || number > b){
+     //pedimos dos datos que son el rango
+    int dato = 0,number=0;
+    cout << "Introduzca un numero en el rango: ("<< a <<" , "<< b <<") Para la Fila :" <<endl;
+    //while que valida el dato en los rangos
+    do{     
+        ValidationOfInt(dato);
+    }while(dato < a || dato > b);
+    cout << "Introduzca un numero en el rango: ("<< a <<" , "<< b <<") Para la Columna :" <<endl;
+    //while que valida el dato en los rangos
+    do{     
         ValidationOfInt(number);
-    };
-    dato=number;
-    number = a -1;
-    cout << "Numero de Columna: ("<< a <<" , "<< b  <<") : ";
-    while(number < a || number > b){
-        ValidationOfInt(number);
-    };
+    }while(number < a || number > b);
     return pair<int ,int> (dato, number);
 }
 // intente de otra forma

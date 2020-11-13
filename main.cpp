@@ -2,14 +2,17 @@
 #include "tools/header.h"
 #include <time.h>
 
+void bienvenido();
+void bienvenidoUser(string);
+
 typedef char **MatrixChar;
 typedef int **MatrixInt;
-/* Responder a la pregunta: ¿Qué está programando? Es decir, viendo el producto como un todo,
+/* 
+    Responder a la pregunta: ¿Qué está programando? Es decir, viendo el producto como un todo,
     desde lo global, ¿De qué se trata la aplicación?
 
     Ya segun yo terminado diria que es una especie de battleship pero como es de una sola persona
     podria ser un buscaminas un poco extrano?
-
  */
 
 int main(void)
@@ -27,8 +30,10 @@ int main(void)
     doubleLinked<nodeinfo> list;
 
     //MAIN:
+    bienvenido();
     //Obtener un nombre con a)
     user = a();
+    bienvenidoUser(user);
     //Inicializar P con b)
     b(P, 0);
     //Inicializar C en 0
@@ -60,3 +65,15 @@ int main(void)
 
     return 0;
 }
+
+void bienvenido()
+{
+    string line,halfline;
+    line="++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+    halfline="++++++++++++++++++++";
+    PRINTALL(line<<endl<<line<<"\n"<<halfline<<"\t\tBienvenido\t\t"<<halfline<<"\n"<<line<<endl<<line<<endl);
+};
+void bienvenidoUser(string x)
+{
+    PRINTALL("Bienvenido "<<x);
+};

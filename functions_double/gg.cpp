@@ -7,17 +7,14 @@
 bool ggaa(int** array, int i, int j, int size){
     int flag = 3;
     if (j >= flag){
-        //*
         for(int k = 0; k <= flag; k++){
             if(array[i][j-k]==1){
-                //cout<<"ggleftF";
-                return false;     //agreagdo para no sobreescribir UNOS (estetica)
+                return false;    
             }
-        }//*/
+        }
         for(int k = 0; k <= flag; k++){
             array[i][j-k]=1;
         }
-        //cout<<"\nggL->"<<"i:"<<i<<" j:"<<j;
         return true;
     }
     return false;
@@ -26,17 +23,14 @@ bool ggaa(int** array, int i, int j, int size){
 bool ggbb(int** array, int i, int j, int size){
     int flag = 3;
     if (j < size - flag){
-        //*
         for(int k = 0; k <= flag; k++){
             if(array[i][j+k]==1){
-                //cout<<"ggRF";
-                return false;     //agreagdo para no sobreescribir UNOS (estetica)
+                return false;    
             }
-        }//*/
+        }
         for(int k = 0; k <= flag; k++){
             array[i][j+k]=1;
         }
-        //cout<<"\nggR->"<<"i:"<<i<<" j:"<<j;
         return true;
     }
     return false;
@@ -45,17 +39,14 @@ bool ggbb(int** array, int i, int j, int size){
 bool ggcc(int** array, int i, int j, int size){
     int flag = 3;
     if (i < size - flag){
-        //*
         for(int k = 0; k <= flag; k++){
             if(array[i+k][j]==1){
-                //cout<<"ggDF";
-                return false;     //agreagdo para no sobreescribir UNOS (estetica)
+                return false;    
             }
-        }//*/
+        }
         for(int k = 0; k <= flag; k++){
             array[i+k][j]=1;
         }
-        //cout<<"\nggD->"<<"i:"<<i<<" j:"<<j;
         return true;
     }
     return false;
@@ -64,17 +55,14 @@ bool ggcc(int** array, int i, int j, int size){
 bool ggdd(int** array, int i, int j, int size){
     int flag = 3;
     if (i >= flag){
-        //*
         for(int k = 0; k <= flag; k++){
             if(array[i-k][j]==1){
-                //cout<<"ggUF";
-                return false;     //agreagdo para no sobreescribir UNOS (estetica)
+                return false;   
             }
-        }//*/
+        }
         for(int k = 0; k <= flag; k++){
             array[i-k][j]=1;
         }
-        //cout<<"\nggU->"<<"i:"<<i<<" j:"<<j;
         return true;
     }
     return false;

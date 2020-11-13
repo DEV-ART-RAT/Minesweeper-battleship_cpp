@@ -1,3 +1,4 @@
+#define PRINTALL(a) cout<<a<<"\n";
 #include "../functions/a.cpp"
 #include "../functions/b.cpp"
 #include "../functions/j.cpp"
