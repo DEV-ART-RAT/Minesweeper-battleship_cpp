@@ -2,12 +2,11 @@
 
 int main(void)
 {   
-char matrix[16][16]={{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'},{'a','b','c','c','c','c','c','c','a','b','c','c','c','c','c','c'}};
-    for(int i = 0; i < 16; i++){
-        for(int j = 0; j < 16; j++)
-            cout<<((MatrixNumberPos(matrix,i,j,5,'a')==false)? "No":"Yes")<<"\t";
-        cout<<"\n";
-    }
+    int matrix[3][3]={{4,2,3},{4,2,3},{4,2,3}};
+    printMatrix(matrix,3,3);
+    MatrixOneStepInsertOne(matrix,0,0,'l');
+    cout<<"Modificada\n";
+    printMatrix(matrix,3,3);
 
     return 0;
 }
