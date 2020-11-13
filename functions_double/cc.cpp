@@ -5,7 +5,7 @@
 
 //coloca 1 en la posicion y abajo
 bool cc(int** array, int i, int j, int size){
-    if (i < size -1){
+    if (A_MENOR_IGUAL_B(i,SIZEONE(size))){
         array[i][j]=1;
         array[i+1][j]=1;
         return true;

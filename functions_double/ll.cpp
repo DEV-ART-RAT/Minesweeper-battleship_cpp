@@ -15,17 +15,17 @@ manera que:
 */
 
 bool llAux(int** array, int size,int rando){
-    pair<int , int> data= generatorTwoRandom(0 , size - 1);
+    pair<int , int> randomGeneratePair= generatorTwoRandom(0 , SIZEONE(size));
 
     switch (rando){
         case 1:
-            return ggaa(array, data.first, data.second, size);
+            return ggaa(array, randomGeneratePair.first, randomGeneratePair.second, size);
         case 2:
-            return ggbb(array, data.first, data.second, size);
+            return ggbb(array, randomGeneratePair.first, randomGeneratePair.second, size);
         case 3:
-            return ggcc(array, data.first, data.second, size);
+            return ggcc(array, randomGeneratePair.first, randomGeneratePair.second, size);
         case 4:
-            return ggdd(array, data.first, data.second, size);
+            return ggdd(array, randomGeneratePair.first, randomGeneratePair.second, size);
         default:
             return false;
     }

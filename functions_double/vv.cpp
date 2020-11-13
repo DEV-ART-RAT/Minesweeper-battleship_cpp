@@ -102,7 +102,6 @@ node<T>* partition(node<T>* low, node<T>* high) {
 template<class T>
 void show(node<T>* list){
     if(list){
-        cout<<list->info.toString()<<" ";
         show(list->next);
     }
 }

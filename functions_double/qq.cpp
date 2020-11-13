@@ -9,19 +9,19 @@ sea igual a 13.
 */
 
 void qqFuntion(int** M,char** N,int& P, int& C, int n){
-    pair<int , int> data;
+    pair<int , int> PairData;
     
     while (C < 13)
     {
-        data = e(0 , n - 1); 
-    if(haveOne(M,data.first, data.second, n)){
-        P += 100;
-        C++;
-        N[data.first][data.second] = 'x';
-    }else
-    {
-        P -= 100;
-    }  
+        PairData = e(0 , n - 1); 
+        if(haveOne(M,PairData.first, PairData.second, n)){
+            P += 100;
+            C++;
+            N[PairData.first][PairData.second] = 'x';
+        }else
+        {
+            P -= 100;
+        }  
     }
     
 

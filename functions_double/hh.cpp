@@ -3,50 +3,54 @@
 //hh) Modificar los casos aa), bb), cc) y dd) para que, coloque los 1 en la celda dada y en 4 celdas en la
 //dirección indicada.
 
-
+//izquierda
 bool hhaa(int** array, int i, int j, int size){
-    int flag = 4;
-    if (j >= flag){
-        for(int k = 0; k <= flag; k++){
-            array[i][j]=1;
-            array[i][j-k]=1;
-        }
+    int step = 4;
+    if (A_MENOR_IGUAL_B(step,j)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j-stepCount]==1)
+                return false;     
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j-stepCount]=1;
         return true;
     }
     return false;
 }
-
+//derecha
 bool hhbb(int** array, int i, int j, int size){
-    int flag = 4;
-    if (j < size - flag){
-        for(int k = 0; k<= flag; k++){
-            array[i][j]=1;
-            array[i][j+k]=1;
-        }
+    int step = 4;
+    if (A_MENOR_B(j,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j+stepCount]==1)
+                return false;   
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j+stepCount]=1;
         return true;
     }
     return false;
 }
-
+//abajo
 bool hhcc(int** array, int i, int j, int size){
-    int flag = 4;
-    if (i < size - flag){
-        for(int k = 0; k<= flag; k++){
-            array[i][j]=1;
-            array[i+k][j]=1;
-        }
+   int step = 4;
+    if (A_MENOR_B(i,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i+stepCount][j]==1)
+                return false;    
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i+stepCount][j]=1;
         return true;
     }
     return false;
 }
-
+//arriba
 bool hhdd(int** array, int i, int j, int size){
-    int flag = 4;
-    if (i >= flag){
-        for(int k = 0; k<= flag; k++){
-            array[i][j]=1;
-            array[i-k][j]=1;
-        }
+   int step = 4;
+    if (A_MENOR_IGUAL_B(step,i)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i-stepCount][j]==1)
+                return false;    
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i-stepCount][j]=1;
         return true;
     }
     return false;

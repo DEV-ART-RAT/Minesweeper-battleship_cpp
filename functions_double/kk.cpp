@@ -25,17 +25,17 @@ void kk(int** array, int size){
     kkAux(array,size,random1_4);
 }
 
-bool kkAux(int** array, int size, int myRandom){
-    pair<int , int> data= generatorTwoRandom(0 , size - 1);
-    switch (myRandom){
+bool kkAux(int** array, int size, int numberR){
+    pair<int , int> randomGenerate= generatorTwoRandom(0 , SIZEONE(size));
+    switch (numberR){
         case 1:
-            return ffaa(array, data.first, data.second, size);
+            return ffaa(array, randomGenerate.first, randomGenerate.second, size);
         case 2:
-            return ffbb(array, data.first, data.second, size);
+            return ffbb(array, randomGenerate.first, randomGenerate.second, size);
         case 3:
-            return ffcc(array, data.first, data.second, size);
+            return ffcc(array, randomGenerate.first, randomGenerate.second, size);
         case 4:
-            return ffdd(array, data.first, data.second, size);
+            return ffdd(array, randomGenerate.first, randomGenerate.second, size);
         default:
             return false;
     }

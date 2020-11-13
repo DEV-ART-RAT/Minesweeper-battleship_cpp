@@ -11,10 +11,10 @@ oo) Hacer una función en C++ que reciba, por referencia, un entero P, un entero
         C en 1.  
     Si el resultado es negativo, debe restarle 100 al valor de P.
 */
-
+//puntaje
 void oo(int** M,int& P, int& C, int n){
-    pair<int , int> data= e(0 , n - 1);
-    if(haveOne(M,data.first, data.second, n)){
+    pair<int , int> PairValidate= e(0 , n - 1);
+    if(haveOne(M,PairValidate.first, PairValidate.second, n)){
         P += 100;
         C++;
     }else

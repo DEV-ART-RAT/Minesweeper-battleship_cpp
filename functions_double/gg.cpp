@@ -3,70 +3,59 @@
 //gg) Modificar los casos aa), bb), cc) y dd) para que, coloque los 1 en la celda dada y en 3 celdas en la
 //dirección indicada.
 
-
+//izquierda
 bool ggaa(int** array, int i, int j, int size){
-    int flag = 3;
-    if (j >= flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i][j-k]==1){
-                return false;    
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i][j-k]=1;
-        }
+    int step = 3;
+    if (A_MENOR_IGUAL_B(step,j)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j-stepCount]==1)
+                return false;     
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j-stepCount]=1;
         return true;
     }
     return false;
 }
-
+//derecha
 bool ggbb(int** array, int i, int j, int size){
-    int flag = 3;
-    if (j < size - flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i][j+k]==1){
-                return false;    
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i][j+k]=1;
-        }
-        return true;
-    }
-    return false;
-}
-
-bool ggcc(int** array, int i, int j, int size){
-    int flag = 3;
-    if (i < size - flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i+k][j]==1){
-                return false;    
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i+k][j]=1;
-        }
-        return true;
-    }
-    return false;
-}
-
-bool ggdd(int** array, int i, int j, int size){
-    int flag = 3;
-    if (i >= flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i-k][j]==1){
+    int step = 3;
+    if (A_MENOR_B(j,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j+stepCount]==1)
                 return false;   
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i-k][j]=1;
-        }
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j+stepCount]=1;
         return true;
     }
     return false;
 }
+//abajo
+bool ggcc(int** array, int i, int j, int size){
+  int step = 3;
+    if (A_MENOR_B(i,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i+stepCount][j]==1)
+                return false;    
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i+stepCount][j]=1;
+        return true;
+    }
+    return false;
+}
+//arriba
+bool ggdd(int** array, int i, int j, int size){
+     int step = 3;
+    if (A_MENOR_IGUAL_B(step,i)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i-stepCount][j]==1)
+                return false;    
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i-stepCount][j]=1;
+        return true;
+    }
+    return false;
+}
+
 void gg(int** array, int i, int j, int size,char move){
     switch (move) {
         case 'u':

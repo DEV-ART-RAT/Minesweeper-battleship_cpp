@@ -6,16 +6,13 @@
 
 //izquierda
 bool ffaa(int** array, int i, int j, int size){
-    int flag = 2;
-    if (j >= flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i][j-k]==1){
+    int step = 2;
+    if (A_MENOR_IGUAL_B(step,j)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j-stepCount]==1)
                 return false;     
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i][j-k]=1;
-        }
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j-stepCount]=1;
         return true;
     }
     return false;
@@ -23,16 +20,13 @@ bool ffaa(int** array, int i, int j, int size){
 
 //derecha
 bool ffbb(int** array, int i, int j, int size){
-    int flag = 2;
-    if (j < size - flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i][j+k]==1){
+    int step = 2;
+    if (A_MENOR_B(j,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i][j+stepCount]==1)
                 return false;   
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i][j+k]=1;
-        }
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i][j+stepCount]=1;
         return true;
     }
     return false;
@@ -40,36 +34,32 @@ bool ffbb(int** array, int i, int j, int size){
 
 // abajo
 bool ffcc(int** array, int i, int j, int size){
-    int flag = 2;
-    if (i < size - flag){
-        for(int k = 0; k <= flag; k++){
-            if(array[i+k][j]==1){
+    int step = 2;
+    if (A_MENOR_B(i,size-step)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i+stepCount][j]==1)
                 return false;    
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i+k][j]=1;
-        }
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i+stepCount][j]=1;
         return true;
     }
     return false;
 }
 //arriba
 bool ffdd(int** array, int i, int j, int size){
-    int flag = 2;
-    if (i >= flag){//*
-        for(int k = 0; k <= flag; k++){
-            if(array[i-k][j]==1){
+    int step = 2;
+    if (A_MENOR_IGUAL_B(step,i)){
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            if(array[i-stepCount][j]==1)
                 return false;    
-            }
-        }
-        for(int k = 0; k <= flag; k++){
-            array[i-k][j]=1;
-        }
+        for(int stepCount = 0; stepCount <= step; stepCount++)
+            array[i-stepCount][j]=1;
         return true;
     }
     return false;
 }
+
+
 //menu de ff
 void ff(int** array, int i, int j, int size,char move){
     switch (move) {

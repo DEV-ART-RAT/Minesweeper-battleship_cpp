@@ -14,17 +14,17 @@ manera que:
         en la variante generada en ii).
 */
 
-bool mmAux(int** array, int size, int myRandom){
-    pair<int , int> data= generatorTwoRandom(0 , size - 1); 
-    switch (myRandom){
+bool mmAux(int** array, int size, int numberR){
+    pair<int , int> RandomGeneratePairValidate= generatorTwoRandom(0 , SIZEONE(size)); 
+    switch (numberR){
         case 1:
-            return iiaa(array, data.first, data.second, size);
+            return iiaa(array, RandomGeneratePairValidate.first, RandomGeneratePairValidate.second, size);
         case 2:
-            return iibb(array, data.first, data.second, size);
+            return iibb(array, RandomGeneratePairValidate.first, RandomGeneratePairValidate.second, size);
         case 3:
-            return iicc(array, data.first, data.second, size);
+            return iicc(array, RandomGeneratePairValidate.first, RandomGeneratePairValidate.second, size);
         case 4:
-            return iidd(array, data.first, data.second, size);
+            return iidd(array, RandomGeneratePairValidate.first, RandomGeneratePairValidate.second, size);
         default:
             return false;
     }

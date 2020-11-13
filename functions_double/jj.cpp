@@ -4,9 +4,9 @@
 //jj) Generalizar todo lo realizado en ff), gg), hh) y ii) en una sola función que sea capaz de soportar
 //todos los casos.
 
-bool jjaa(int** array, int i, int j, int size, int numberCase){
-    if (j >= numberCase){
-        for(int k = 0; k <= numberCase; k++){
+bool jjaa(int** array, int i, int j, int size, int Ncase){
+    if (A_MENOR_IGUAL_B(Ncase,j)){
+        for(int k = 0; k <= Ncase; k++){
             array[i][j]=1;
             array[i][j-k]=1;
         }
@@ -15,9 +15,9 @@ bool jjaa(int** array, int i, int j, int size, int numberCase){
     return false;
 }
 
-bool jjbb(int** array, int i, int j, int size, int numberCase){
-    if (j < size - numberCase){
-        for(int k = 0; k<= numberCase; k++){
+bool jjbb(int** array, int i, int j, int size, int Ncase){
+    if (A_MENOR_B(j,size - Ncase)){
+        for(int k = 0; k<= Ncase; k++){
             array[i][j]=1;
             array[i][j+k]=1;
         }
@@ -26,9 +26,9 @@ bool jjbb(int** array, int i, int j, int size, int numberCase){
     return false;
 }
 
-bool jjcc(int** array, int i, int j, int size, int numberCase){
-    if (i < size - numberCase){
-        for(int k = 0; k<= numberCase; k++){
+bool jjcc(int** array, int i, int j, int size, int Ncase){
+    if (A_MENOR_B(i,size - Ncase)){
+        for(int k = 0; k<= Ncase; k++){
             array[i][j]=1;
             array[i+k][j]=1;
         }
@@ -37,9 +37,9 @@ bool jjcc(int** array, int i, int j, int size, int numberCase){
     return false;
 }
 
-bool jjdd(int** array, int i, int j, int size, int numberCase){
-    if (i >= numberCase){
-        for(int k = 0; k<= numberCase; k++){
+bool jjdd(int** array, int i, int j, int size, int Ncase){
+    if (A_MENOR_IGUAL_B(Ncase,i)){
+        for(int k = 0; k<= Ncase; k++){
             array[i][j]=1;
             array[i-k][j]=1;
         }
@@ -48,7 +48,7 @@ bool jjdd(int** array, int i, int j, int size, int numberCase){
     return false;
 }
 
-bool ee(int** array, int i, int j, int size, int numberCase){
-    return  jjaa(array,i,j,size,numberCase) && jjbb(array,i,j,size,numberCase)
-    && jjdd(array,i,j,size,numberCase) && jjcc(array,i, j ,size,numberCase);
+bool ee(int** array, int i, int j, int size, int Ncase){
+    return  jjaa(array,i,j,size,Ncase) && jjbb(array,i,j,size,Ncase)
+    && jjdd(array,i,j,size,Ncase) && jjcc(array,i, j ,size,Ncase);
 }

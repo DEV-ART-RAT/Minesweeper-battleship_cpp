@@ -5,14 +5,17 @@
 
 using namespace std;
 template<class T>
+//struct de la lista
 struct doubleLinked {
     node<T>* front,* back;
     doubleLinked () {
         front = back = NULL;
     }
 };
+//template ya que es tipo nodo
 template<class T>
 void pushFront(T info, doubleLinked<T>* dl) {
+    //verificamos si tiene a alguien enfrente , sino es porque es el primero
     node<T>* n = new node<T>;
     n->info = info;
     n->prev = NULL;
@@ -28,6 +31,7 @@ void pushFront(T info, doubleLinked<T>* dl) {
 
 template<class T>
 void pushBack(T info, doubleLinked<T>* dl) {
+    //Verificamos como siempre si tiene a a alguien
     node<T>* n = new node<T>;
     n->info = info;
     n->next = NULL;
@@ -43,15 +47,14 @@ void pushBack(T info, doubleLinked<T>* dl) {
 
 template<class T>
 void pushAt(int pos, T info, node<T>** front) {
+    //para push en una posicion
     node<T>* n = new node<T>;
     n->info = info;
     n->prev = n->next = NULL;
     if(pos == 0) {
         (*front)->prev = n;
         n->next = *front;
-
         *front = n;
-
         return;
     }
     int counter = 0;

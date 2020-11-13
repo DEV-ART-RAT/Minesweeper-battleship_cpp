@@ -6,7 +6,7 @@
 
 //coloca 1 en la posicion y la izquierda
 bool aa(int** array, int i, int j, int size){
-    if (i >= 1){
+    if (A_MENOR_IGUAL_B(1,i)){
         array[i][j]=1;
         array[i][j-1]=1;
         return true;

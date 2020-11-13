@@ -7,7 +7,7 @@ Hacer una función que dada una lista como la descrita en tt), y que si la lista
 10 nodos, recorte nodos desde el final hasta que queden 10.
 */
 
-
+// top 10
 template <class T>
 void ww(doubleLinked<T>* front) {
     int flag = 1;
@@ -17,6 +17,7 @@ void ww(doubleLinked<T>* front) {
         flag++;
         aux=aux->next;
     }
+    //borra si sobran
     if(aux){
         front->back = aux;
         wwAux(aux->next);

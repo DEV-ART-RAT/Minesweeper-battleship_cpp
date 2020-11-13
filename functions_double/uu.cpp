@@ -5,14 +5,14 @@ using namespace std;
 //uu) Modificar Quicksort para que sea capaz de ordenar descendentemente una lista como la descrita
 //en tt), usando como criterio de comparación el entero que hay en cada nodo.
 
-
+// cambia
 template<class T>
 void swap(node<T>* a, node<T>* b) {
     T temp = a->info;
     a->info = b->info;
     b->info = temp;
 }
-
+//push atras
 template<class T>
 void pushBack(node<T>** dl, T info) {
     node<T>* n = new node<T>(info);
@@ -26,7 +26,6 @@ void pushBack(node<T>** dl, T info) {
         n->prev = aux;
         aux->next = n;
     }
-    cout<<n->info<<"aqui";
 }
 
 template<class T>
@@ -70,7 +69,6 @@ node<T>* partition(node<T>* low, node<T>* high) {
 template<class T>
 void show(node<T>* list){
     if(list){
-        cout<<list->info<<" ";
         show(list->next);
     }
 }

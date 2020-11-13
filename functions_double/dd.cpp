@@ -6,7 +6,7 @@
 
 //coloca 1 en la posicion y arriba
 bool dd(int** array, int i, int j, int size){
-    if (i >= 1){
+    if (A_MENOR_IGUAL_B(1,i)){
         array[i][j]=1;
         array[i-1][j]=1;
         return true;
